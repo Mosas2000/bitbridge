@@ -1,0 +1,369 @@
+/* BitBridge Frontend Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+  color: white;
+}
+
+/* Header Styles */
+.App-header {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Button Styles */
+.connect-btn, .disconnect-btn, .submit-btn, .process-btn, .withdraw-btn, .update-price-btn, .refresh-btn {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.connect-btn:hover, .submit-btn:hover, .process-btn:hover, .withdraw-btn:hover, .update-price-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.disconnect-btn {
+  background: linear-gradient(45deg, #74b9ff, #0984e3);
+  margin-left: 1rem;
+}
+
+.refresh-btn {
+  background: linear-gradient(45deg, #00b894, #00a085);
+  margin-top: 1rem;
+}
+
+/* Wallet Info */
+.wallet-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.wallet-info span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: monospace;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Tab Navigation */
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-nav button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  padding: 12px 24px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.tab-nav button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tab-nav button.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ff6b6b;
+}
+
+/* Tab Content */
+.tab-content {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ff6b6b;
+}
+
+/* Price Info */
+.price-info {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.conversion-preview {
+  background: rgba(0, 255, 0, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  text-align: center;
+  border: 2px solid rgba(0, 255, 0, 0.3);
+}
+
+/* Dashboard Styles */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-card h3 {
+  margin-bottom: 1rem;
+  color: #ff6b6b;
+}
+
+.balance-amount, .payment-count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00b894;
+}
+
+/* Table Styles */
+.payments-table {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.payments-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.payments-table th,
+.payments-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.payments-table th {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status.pending {
+  background: rgba(255, 193, 7, 0.3);
+  color: #ffc107;
+}
+
+.status.completed {
+  background: rgba(40, 167, 69, 0.3);
+  color: #28a745;
+}
+
+/* Price Display */
+.price-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.price-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00b894;
+  margin: 1rem 0;
+}
+
+.calculator-grid, .info-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.conversion-row, .info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* Welcome Section */
+.welcome-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.feature h3 {
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+/* Transaction Result */
+.transaction-result {
+  background: rgba(40, 167, 69, 0.2);
+  border: 2px solid rgba(40, 167, 69, 0.5);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+.transaction-result code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  word-break: break-all;
+}
+
+.transaction-result a {
+  color: #74b9ff;
+  text-decoration: none;
+}
+
+.transaction-result a:hover {
+  text-decoration: underline;
+}
+
+/* Admin Section */
+.admin-section {
+  background: rgba(255, 193, 7, 0.1);
+  border: 2px solid rgba(255, 193, 7, 0.3);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.admin-note {
+  color: #ffc107;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .tab-content {
+    padding: 1rem;
+  }
+  
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
